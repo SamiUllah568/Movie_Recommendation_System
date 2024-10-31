@@ -38,3 +38,40 @@ To run this project, you need to have Python installed on your machine. You can 
 git clone https://github.com/SamiUllah568/Movie_Recommendation_System.git
 cd Movie_Recommendation_System
 
+## **Usage**
+
+Import the necessary libraries and load the datasets:
+
+```python
+import pandas as pd
+
+
+Load the Data:
+data_credit = pd.read_csv("tmdb_5000_credits.csv")
+data_movies = pd.read_csv("tmdb_5000_movies.csv")
+
+
+Run the recommendation function by providing a movie title
+
+recommend("Batman Begins")
+
+How It Works
+Data Preparation: The datasets are merged and cleaned to retain relevant features.
+
+Text Preprocessing: The text data is processed to create a tags column that combines important attributes.
+
+Vectorization: The tags column is vectorized using the Bag of Words (BoW) method.
+
+Similarity Calculation: Cosine similarity is calculated between movie vectors to find similar movies.
+
+Recommendation: A function retrieves and displays the top similar movies based on user input.
+**Example**
+To recommend movies similar to "Batman Begins"
+recommend("Batman Begins")
+
+**Output:**
+The Dark Knight
+Batman
+Batman
+The Dark Knight Rises
+10th & Wolf
